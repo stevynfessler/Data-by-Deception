@@ -9,6 +9,11 @@ shinyServer(function(input, output) {
     addTiles()
     m %>% setView(lng = -122.4194, lat = 37.7749, zoom = 10)
     m %>% addCircles(~X, ~Y, popup = df$Description)
+    
 })
+  
+  output$timeElapsed <- renderText({
+    "The amount of time elapsed is:"
+  })
     }
       )
